@@ -1,0 +1,923 @@
+/* ==========================================================================
+   RESET & BASE
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f4f7f2;
+  color: #1c2a22;
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #cfe3d4;
+  color: #16261d;
+}
+
+a {
+  color: inherit;
+}
+
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* ==========================================================================
+   ANIMAÇÕES
+   ========================================================================== */
+@keyframes risefade {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   BARRA DE PROGRESSO
+   ========================================================================== */
+.barra-progresso {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: #2f6b4f;
+  z-index: 120;
+  transition: width 0.12s linear;
+}
+
+/* ==========================================================================
+   CABEÇALHO / NAV
+   ========================================================================== */
+.cabecalho-principal {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: saturate(1.1) blur(10px);
+  background: rgba(244, 247, 242, 0.82);
+  border-bottom: 1px solid rgba(31, 74, 55, 0.1);
+}
+
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex: none;
+}
+
+.nav-logo-bolinha {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #2f6b4f;
+  box-shadow: 0 0 0 4px rgba(47, 107, 79, 0.16);
+}
+
+.nav-logo-texto {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: 16px;
+}
+
+.nav-espaco-flex {
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5d6b62;
+  padding: 7px 12px;
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: #1f4a37;
+  background: rgba(47, 107, 79, 0.08);
+}
+
+.nav-link--ativo {
+  color: #1f4a37;
+  background: rgba(47, 107, 79, 0.12);
+}
+
+.nav-botao-direcao {
+  flex: none;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2f6b4f;
+  border: 1px solid rgba(47, 107, 79, 0.35);
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+/* ==========================================================================
+   CONTAINER GENÉRICO
+   ========================================================================== */
+.conteudo-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 88px 32px;
+}
+
+.conteudo-container--estreito {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 88px 32px;
+}
+
+/* ==========================================================================
+   EYEBROW / LABEL DE SEÇÃO
+   ========================================================================== */
+.secao-label {
+  margin: 0 0 14px;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #2f6b4f;
+  font-weight: 600;
+}
+
+.secao-label--claro {
+  color: #9cc7ad;
+}
+
+/* ==========================================================================
+   SEÇÃO HERO (#inicio)
+   ========================================================================== */
+.secao-hero {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 96px 32px 88px;
+}
+
+.hero-fundo-decorativo {
+  position: absolute;
+  top: -80px;
+  right: -120px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #dcebdf 0, #e4efe2 40%, rgba(228, 239, 226, 0) 72%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.hero-subtitulo {
+  margin: 0 0 22px;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #2f6b4f;
+  font-weight: 600;
+}
+
+.hero-titulo {
+  margin: 0;
+  font-family: 'Newsreader', serif;
+  font-weight: 500;
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  max-width: 16ch;
+  text-wrap: balance;
+}
+
+.hero-descricao {
+  margin: 28px 0 0;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.5;
+  color: #3a4942;
+  max-width: 54ch;
+  text-wrap: pretty;
+}
+
+.hero-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.botao-primario {
+  text-decoration: none;
+  background: #2f6b4f;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  box-shadow: 0 10px 28px -10px rgba(47, 107, 79, 0.6);
+}
+
+.botao-secundario {
+  text-decoration: none;
+  background: transparent;
+  color: #1f4a37;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: 1px solid rgba(31, 74, 55, 0.25);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 64px;
+  max-width: 760px;
+}
+
+.cartao-stat {
+  background: #fff;
+  border: 1px solid rgba(31, 74, 55, 0.08);
+  border-radius: 20px;
+  padding: 22px 24px;
+}
+
+.cartao-stat__numero {
+  font-family: 'Newsreader', serif;
+  font-size: 34px;
+  color: #2f6b4f;
+  line-height: 1;
+}
+
+.cartao-stat__descricao {
+  font-size: 14px;
+  color: #5d6b62;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   SEÇÃO ANTIBIÓTICOS (#antibioticos)
+   ========================================================================== */
+.secao-branca {
+  background: #fff;
+}
+
+.secao-branca--arredondada {
+  background: #fff;
+  border-radius: 48px 48px 0 0;
+  margin-top: 24px;
+}
+
+.grade-dois-colunas {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.secao-titulo {
+  margin: 0;
+  font-family: 'Newsreader', serif;
+  font-weight: 500;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.secao-texto {
+  font-size: 17px;
+  line-height: 1.65;
+  color: #3a4942;
+}
+
+.secao-texto p {
+  margin: 0 0 16px;
+}
+
+.secao-texto p:last-child {
+  margin: 0;
+}
+
+.grade-tres-colunas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 56px;
+}
+
+.cartao-tipo-agente {
+  border: 1px solid rgba(31, 74, 55, 0.12);
+  border-radius: 24px;
+  padding: 28px;
+  background: #f4f7f2;
+}
+
+.cartao-tipo-agente__cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.bolinha-indicadora {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.bolinha-indicadora--verde {
+  background: #2f6b4f;
+}
+
+.bolinha-indicadora--vermelho {
+  background: #b9543f;
+}
+
+.cartao-tipo-agente__nome {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.cartao-tipo-agente__descricao {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #3a4942;
+}
+
+.cartao-tipo-agente__status {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cartao-tipo-agente__status--positivo {
+  color: #2f6b4f;
+}
+
+.cartao-tipo-agente__status--negativo {
+  color: #b9543f;
+}
+
+/* ==========================================================================
+   SEÇÃO RESISTÊNCIA (#resistencia)
+   ========================================================================== */
+.secao-escura {
+  background: #1f4a37;
+  color: #eaf2ec;
+}
+
+.secao-titulo--claro {
+  margin: 0;
+  font-family: 'Newsreader', serif;
+  font-weight: 500;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  max-width: 20ch;
+  text-wrap: balance;
+}
+
+.secao-descricao--claro {
+  margin: 20px 0 0;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #c7dccd;
+  max-width: 60ch;
+}
+
+.grade-quatro-colunas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 48px;
+}
+
+.cartao-passo {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  padding: 26px;
+}
+
+.cartao-passo__numero {
+  font-family: 'Newsreader', serif;
+  font-size: 30px;
+  color: #9cc7ad;
+}
+
+.cartao-passo__titulo {
+  margin: 12px 0 8px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.cartao-passo__descricao {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #c7dccd;
+}
+
+.mecanismos-escape {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding-top: 32px;
+}
+
+.mecanismos-escape__label {
+  margin: 0 0 18px;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #9cc7ad;
+  font-weight: 600;
+}
+
+.grade-mecanismos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.mecanismo-item {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #cfe1d5;
+}
+
+/* ==========================================================================
+   SEÇÃO USO VETERINÁRIO (#uso)
+   ========================================================================== */
+.grade-tres-colunas--uso {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 44px;
+}
+
+.cartao-uso {
+  border: 1px solid rgba(31, 74, 55, 0.12);
+  border-radius: 24px;
+  padding: 30px;
+  background: #f4f7f2;
+}
+
+.cartao-uso__titulo {
+  margin: 0 0 10px;
+  font-family: 'Newsreader', serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #1f4a37;
+}
+
+.cartao-uso__descricao {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #3a4942;
+}
+
+.grade-dois-colunas--uso {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.cartao-animal {
+  border-radius: 24px;
+  padding: 28px 30px;
+  background: #e6efe6;
+  border: 1px solid rgba(31, 74, 55, 0.1);
+}
+
+.cartao-animal__titulo {
+  margin: 0 0 6px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.cartao-animal__descricao {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #3a4942;
+}
+
+/* ==========================================================================
+   SEÇÃO USO CORRETO vs INCORRETO (#correto)
+   ========================================================================== */
+.secao-cinza {
+  background: #f4f7f2;
+}
+
+.secao-titulo--correto {
+  margin: 0 0 40px;
+  font-family: 'Newsreader', serif;
+  font-weight: 500;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  max-width: 18ch;
+  text-wrap: balance;
+}
+
+.grade-comparativa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.cartao-comparativo {
+  background: #fff;
+  border-radius: 28px;
+  padding: 34px;
+}
+
+.cartao-comparativo--correto {
+  border: 1px solid rgba(47, 107, 79, 0.3);
+  box-shadow: 0 18px 40px -28px rgba(47, 107, 79, 0.5);
+}
+
+.cartao-comparativo--incorreto {
+  border: 1px solid rgba(185, 84, 63, 0.3);
+  box-shadow: 0 18px 40px -28px rgba(185, 84, 63, 0.4);
+}
+
+.cartao-comparativo__cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.icone-comparativo {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.icone-comparativo--correto {
+  background: #2f6b4f;
+}
+
+.icone-comparativo--incorreto {
+  background: #b9543f;
+}
+
+.cartao-comparativo__titulo--correto {
+  font-weight: 700;
+  font-size: 20px;
+  color: #1f4a37;
+}
+
+.cartao-comparativo__titulo--incorreto {
+  font-weight: 700;
+  font-size: 20px;
+  color: #8f3f2f;
+}
+
+.lista-comparativa {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lista-comparativa__item {
+  display: flex;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #3a4942;
+}
+
+.lista-comparativa__ponto--correto {
+  color: #2f6b4f;
+  font-weight: 700;
+}
+
+.lista-comparativa__ponto--incorreto {
+  color: #b9543f;
+  font-weight: 700;
+}
+
+.aviso-conscientizacao {
+  margin-top: 24px;
+  background: #fff;
+  border: 1px solid rgba(31, 74, 55, 0.1);
+  border-radius: 24px;
+  padding: 30px 34px;
+}
+
+.aviso-conscientizacao__texto {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #3a4942;
+}
+
+.aviso-conscientizacao__destaque {
+  color: #1f4a37;
+}
+
+/* ==========================================================================
+   SEÇÃO SAÚDE ÚNICA (#saude)
+   ========================================================================== */
+.grade-saude {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.secao-titulo--saude {
+  margin: 0;
+  font-family: 'Newsreader', serif;
+  font-weight: 500;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.secao-descricao--saude {
+  margin: 22px 0 0;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #3a4942;
+}
+
+.lista-saude {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cartao-saude-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #f4f7f2;
+  border-radius: 20px;
+  padding: 22px 24px;
+}
+
+.cartao-saude-item__bolinha {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #2f6b4f;
+  margin-top: 6px;
+  flex: none;
+}
+
+.cartao-saude-item__titulo {
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.cartao-saude-item__descricao {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #3a4942;
+}
+
+.bloco-veterinario {
+  margin-top: 48px;
+  background: #1f4a37;
+  color: #eaf2ec;
+  border-radius: 32px;
+  padding: 44px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.bloco-veterinario__titulo {
+  margin: 0;
+  font-family: 'Newsreader', serif;
+  font-weight: 500;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.15;
+}
+
+.bloco-veterinario__descricao {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #c7dccd;
+}
+
+/* ==========================================================================
+   SEÇÃO FAQ (#faq)
+   ========================================================================== */
+.lista-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid rgba(31, 74, 55, 0.1);
+  border-radius: 18px;
+  padding: 4px 24px;
+}
+
+.faq-item summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.faq-item__icone {
+  color: #2f6b4f;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.faq-item__resposta {
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #3a4942;
+}
+
+/* ==========================================================================
+   SEÇÃO GLOSSÁRIO (#glossario)
+   ========================================================================== */
+.grade-glossario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 56px;
+}
+
+.lista-glossario {
+  margin: 0;
+}
+
+.glossario-termo {
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 20px;
+}
+
+.glossario-definicao {
+  margin: 6px 0 18px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #3a4942;
+  border-bottom: 1px solid rgba(31, 74, 55, 0.08);
+  padding-bottom: 18px;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+.rodape {
+  background: #1c2a22;
+  color: #c7dccd;
+}
+
+.rodape-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 72px 32px 56px;
+}
+
+.grade-rodape {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+}
+
+.rodape-marca {
+  margin: 0 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.rodape-marca__bolinha {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #9cc7ad;
+}
+
+.rodape-descricao {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 48ch;
+}
+
+.rodape-creditos {
+  margin: 24px 0 0;
+  font-size: 13px;
+  color: #8fa597;
+}
+
+.rodape-autores {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #8fa597;
+}
+
+.rodape-referencias-label {
+  margin: 0 0 16px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9cc7ad;
+  font-weight: 600;
+}
+
+.lista-referencias {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   UTILITÁRIOS
+   ========================================================================== */
+.main-overflow {
+  overflow: hidden;
+}
+
+.secao-texto--uso-intro {
+  margin: 0;
+  max-width: 62ch;
+}
+
+/* ==========================================================================
+   PRINT
+   ========================================================================== */
+@media print {
+  @page { margin: 0; }
+  body { padding: 0.5in; box-sizing: border-box; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  figure, table, pre, blockquote, img, svg, tr, [class~="card" i] { break-inside: avoid; }
+  img, svg { max-width: 100%; }
+  p { orphans: 3; widows: 3; }
+}

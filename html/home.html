@@ -1,326 +1,467 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Uso Consciente - Resistência Antimicrobiana</title>
+  <title>Uso Consciente – Direção A</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/Resistencia-Antimicrobiana-Site/css/styles.css">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <a href="#inicio">
-        <span></span>
-        <span>Uso Consciente</span>
+  <!-- Barra de Progresso de Leitura -->
+  <div class="barra-progresso" data-progress></div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="cabecalho-principal">
+    <nav class="nav-container">
+      <a href="#inicio" class="nav-logo">
+        <span class="nav-logo-bolinha"></span>
+        <span class="nav-logo-texto">Uso Consciente</span>
       </a>
-      <div>
-        <a href="#antibioticos">Antibióticos</a>
-        <a href="#resistencia">Resistência</a>
-        <a href="#uso">Uso veterinário</a>
-        <a href="#correto">Uso correto</a>
-        <a href="#saude">Saúde Única</a>
-        <a href="#faq">FAQ</a>
+
+      <div class="nav-espaco-flex"></div>
+
+      <div class="nav-links" data-navlinks>
+        <a href="#antibioticos" class="nav-link">Antibióticos</a>
+        <a href="#resistencia" class="nav-link">Resistência</a>
+        <a href="#uso" class="nav-link">Uso veterinário</a>
+        <a href="#correto" class="nav-link">Uso correto</a>
+        <a href="#saude" class="nav-link">Saúde Única</a>
+        <a href="#faq" class="nav-link">FAQ</a>
       </div>
-      <a href="Uso Consciente — Direcao B.dc.html">Ver Direção B →</a>
+
+      <a href="Uso Consciente — Direcao B.dc.html" class="nav-botao-direcao">Ver Direção B →</a>
     </nav>
   </header>
 
-  <main>
-    <section id="inicio">
-      <p>Saúde Única · Medicina Veterinária</p>
-      <h1>Resistência antimicrobiana e o uso responsável de antibióticos em animais</h1>
-      <p>Cada dose importa. Entenda por que o uso consciente de antibióticos protege a saúde dos animais, das pessoas e do meio ambiente — e o que cada tutor pode fazer.</p>
-      <div>
-        <a href="#resistencia">Como surge a resistência</a>
-        <a href="#correto">Uso correto × incorreto</a>
+  <main class="main-overflow">
+
+    <!-- ============================
+         SEÇÃO 00 — HERO
+         ============================ -->
+    <section id="inicio" class="secao-hero">
+      <div class="hero-fundo-decorativo"></div>
+
+      <p class="hero-subtitulo">Saúde Única · Medicina Veterinária</p>
+
+      <h1 class="hero-titulo">
+        Resistência antimicrobiana e o uso responsável de antibióticos em animais
+      </h1>
+
+      <p class="hero-descricao">
+        Cada dose importa. Entenda por que o uso consciente de antibióticos protege a saúde dos animais, das pessoas e do meio ambiente — e o que cada tutor pode fazer.
+      </p>
+
+      <div class="hero-botoes">
+        <a href="#resistencia" class="botao-primario">Como surge a resistência</a>
+        <a href="#correto" class="botao-secundario">Uso correto × incorreto</a>
       </div>
-      <div>
-        <div>
-          <div>3</div>
-          <div>saúdes interligadas: animal, humana e ambiental</div>
+
+      <div class="hero-stats">
+        <div class="cartao-stat">
+          <div class="cartao-stat__numero">3</div>
+          <div class="cartao-stat__descricao">saúdes interligadas: animal, humana e ambiental</div>
         </div>
-        <div>
-          <div>0</div>
-          <div>efeito de antibióticos contra vírus e fungos</div>
+        <div class="cartao-stat">
+          <div class="cartao-stat__numero">0</div>
+          <div class="cartao-stat__descricao">efeito de antibióticos contra vírus e fungos</div>
         </div>
-        <div>
-          <div>1</div>
-          <div>prescrição veterinária para começar com segurança</div>
+        <div class="cartao-stat">
+          <div class="cartao-stat__numero">1</div>
+          <div class="cartao-stat__descricao">prescrição veterinária para começar com segurança</div>
         </div>
       </div>
     </section>
 
-    <section id="antibioticos">
-      <div>
-        <p>01 — O que são</p>
-        <div>
-          <h2>Antibióticos combatem bactérias — e só bactérias</h2>
+    <!-- ============================
+         SEÇÃO 01 — O QUE SÃO
+         ============================ -->
+    <section id="antibioticos" data-reveal class="secao-branca--arredondada">
+      <div class="conteudo-container">
+        <p class="secao-label">01 — O que são</p>
+
+        <div class="grade-dois-colunas">
           <div>
+            <h2 class="secao-titulo">Antibióticos combatem bactérias — e só bactérias</h2>
+          </div>
+          <div class="secao-texto">
             <p>Antibióticos eliminam bactérias ou impedem seu crescimento, ajudando o sistema imunológico a controlar a infecção. Agem destruindo a parede celular, interferindo na síntese de proteínas ou bloqueando a multiplicação dos microrganismos.</p>
             <p>Desde sua descoberta, transformaram a medicina humana e veterinária. Mas, para serem eficazes e seguros, dependem de orientação profissional: o medicamento certo, na dose certa, pelo tempo certo.</p>
           </div>
         </div>
 
-        <div>
-          <div>
-            <div><span></span><span>Bactérias</span></div>
-            <p>Organismos unicelulares com estrutura própria. Algumas causam infecções.</p>
-            <p>✓ Combatidas por antibióticos</p>
-          </div>
-          <div>
-            <div><span></span><span>Vírus</span></div>
-            <p>Agentes acelulares que invadem células para se reproduzir — cinomose, parvovirose, raiva.</p>
-            <p>✕ Antibióticos não funcionam</p>
-          </div>
-          <div>
-            <div><span></span><span>Fungos</span></div>
-            <p>Causam micoses na pele, pelos, unhas e órgãos internos.</p>
-            <p>✕ Tratados com antifúngicos</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="resistencia">
-      <div>
-        <p>02 — Como surge</p>
-        <h2>A resistência nasce do uso incorreto, dose após dose</h2>
-        <p>Resistência antimicrobiana é a capacidade de bactérias sobreviverem a antibióticos que antes as eliminavam. Pode ser natural — característica da própria espécie — ou adquirida, por mutações ou troca de genes. Veja como o processo se acelera:</p>
-
-        <div>
-          <div>
-            <div>01</div>
-            <h3>Mutação</h3>
-            <p>Alterações genéticas surgem espontaneamente durante a multiplicação.</p>
-          </div>
-          <div>
-            <div>02</div>
-            <h3>Pressão de seleção</h3>
-            <p>O antibiótico elimina as sensíveis; as resistentes sobrevivem e se multiplicam.</p>
-          </div>
-          <div>
-            <div>03</div>
-            <h3>Transferência</h3>
-            <p>Bactérias trocam genes de resistência via plasmídeos — até entre espécies.</p>
-          </div>
-          <div>
-            <div>04</div>
-            <h3>Superbactérias</h3>
-            <p>Surgem cepas multirresistentes, difíceis de tratar.</p>
-          </div>
-        </div>
-
-        <div>
-          <p>Como a bactéria escapa do antibiótico</p>
-          <ul>
-            <li>Produz enzimas que inativam o medicamento</li>
-            <li>Altera o alvo de ação do fármaco</li>
-            <li>Reduz a permeabilidade da membrana</li>
-            <li>Usa bombas de efluxo para expulsá-lo</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="uso">
-      <div>
-        <p>03 — Na clínica e no campo</p>
-        <h2>Como os antibióticos são usados na medicina veterinária</h2>
-        <p>Usados em animais de companhia, de produção e silvestres — em infecções respiratórias, urinárias, dermatológicas, gastrointestinais e em cirurgias. O uso se classifica em três formas:</p>
-
-        <div>
-          <div>
-            <h3>Terapêutico</h3>
-            <p>O animal já está doente e precisa de tratamento.</p>
-          </div>
-          <div>
-            <h3>Profilático</h3>
-            <p>Previne a infecção antes que ela ocorra.</p>
-          </div>
-          <div>
-            <h3>Metafilático</h3>
-            <p>Trata o grupo quando parte dele já apresenta sinais, evitando a disseminação.</p>
-          </div>
-        </div>
-
-        <div>
-          <div>
-            <p><strong>Animais de produção</strong></p>
-            <p>Bovinos, suínos e aves: controle de doenças, prevenção de infecções e redução de perdas econômicas no rebanho.</p>
-          </div>
-          <div>
-            <p><strong>Animais de companhia</strong></p>
-            <p>Cães e gatos: uso individualizado, conforme a condição clínica e a necessidade de cada paciente.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="correto">
-      <div>
-        <p>04 — A diferença que protege</p>
-        <h2>Uso correto × uso incorreto</h2>
-        <div>
-          <div>
-            <div>
-              <span>✓</span>
-              <span>Uso correto</span>
+        <div class="grade-tres-colunas">
+          <div class="cartao-tipo-agente">
+            <div class="cartao-tipo-agente__cabecalho">
+              <span class="bolinha-indicadora bolinha-indicadora--verde"></span>
+              <span class="cartao-tipo-agente__nome">Bactérias</span>
             </div>
-            <ul>
-              <li>Sempre com prescrição médico-veterinária</li>
-              <li>Dose, horários e duração corretos</li>
-              <li>Tratamento concluído por completo, mesmo após melhora</li>
-              <li>Medicamento adequado ao agente e ao paciente</li>
-              <li>Descarte correto das sobras</li>
+            <p class="cartao-tipo-agente__descricao">Organismos unicelulares com estrutura própria. Algumas causam infecções.</p>
+            <p class="cartao-tipo-agente__status cartao-tipo-agente__status--positivo">✓ Combatidas por antibióticos</p>
+          </div>
+
+          <div class="cartao-tipo-agente">
+            <div class="cartao-tipo-agente__cabecalho">
+              <span class="bolinha-indicadora bolinha-indicadora--vermelho"></span>
+              <span class="cartao-tipo-agente__nome">Vírus</span>
+            </div>
+            <p class="cartao-tipo-agente__descricao">Agentes acelulares que invadem células para se reproduzir — cinomose, parvovirose, raiva.</p>
+            <p class="cartao-tipo-agente__status cartao-tipo-agente__status--negativo">✕ Antibióticos não funcionam</p>
+          </div>
+
+          <div class="cartao-tipo-agente">
+            <div class="cartao-tipo-agente__cabecalho">
+              <span class="bolinha-indicadora bolinha-indicadora--vermelho"></span>
+              <span class="cartao-tipo-agente__nome">Fungos</span>
+            </div>
+            <p class="cartao-tipo-agente__descricao">Causam micoses na pele, pelos, unhas e órgãos internos.</p>
+            <p class="cartao-tipo-agente__status cartao-tipo-agente__status--negativo">✕ Tratados com antifúngicos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SEÇÃO 02 — RESISTÊNCIA
+         ============================ -->
+    <section id="resistencia" data-reveal class="secao-escura">
+      <div class="conteudo-container">
+        <p class="secao-label secao-label--claro">02 — Como surge</p>
+
+        <h2 class="secao-titulo--claro">A resistência nasce do uso incorreto, dose após dose</h2>
+
+        <p class="secao-descricao--claro">
+          Resistência antimicrobiana é a capacidade de bactérias sobreviverem a antibióticos que antes as eliminavam. Pode ser natural — característica da própria espécie — ou adquirida, por mutações ou troca de genes. Veja como o processo se acelera:
+        </p>
+
+        <div class="grade-quatro-colunas">
+          <div class="cartao-passo">
+            <div class="cartao-passo__numero">01</div>
+            <h3 class="cartao-passo__titulo">Mutação</h3>
+            <p class="cartao-passo__descricao">Alterações genéticas surgem espontaneamente durante a multiplicação.</p>
+          </div>
+          <div class="cartao-passo">
+            <div class="cartao-passo__numero">02</div>
+            <h3 class="cartao-passo__titulo">Pressão de seleção</h3>
+            <p class="cartao-passo__descricao">O antibiótico elimina as sensíveis; as resistentes sobrevivem e se multiplicam.</p>
+          </div>
+          <div class="cartao-passo">
+            <div class="cartao-passo__numero">03</div>
+            <h3 class="cartao-passo__titulo">Transferência</h3>
+            <p class="cartao-passo__descricao">Bactérias trocam genes de resistência via plasmídeos — até entre espécies.</p>
+          </div>
+          <div class="cartao-passo">
+            <div class="cartao-passo__numero">04</div>
+            <h3 class="cartao-passo__titulo">Superbactérias</h3>
+            <p class="cartao-passo__descricao">Surgem cepas multirresistentes, difíceis de tratar.</p>
+          </div>
+        </div>
+
+        <div class="mecanismos-escape">
+          <p class="mecanismos-escape__label">Como a bactéria escapa do antibiótico</p>
+          <div class="grade-mecanismos">
+            <div class="mecanismo-item">Produz enzimas que inativam o medicamento</div>
+            <div class="mecanismo-item">Altera o alvo de ação do fármaco</div>
+            <div class="mecanismo-item">Reduz a permeabilidade da membrana</div>
+            <div class="mecanismo-item">Usa bombas de efluxo para expulsá-lo</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SEÇÃO 03 — USO VETERINÁRIO
+         ============================ -->
+    <section id="uso" data-reveal class="secao-branca">
+      <div class="conteudo-container">
+        <p class="secao-label">03 — Na clínica e no campo</p>
+
+        <h2 class="secao-titulo">Como os antibióticos são usados na medicina veterinária</h2>
+
+        <p class="secao-texto secao-texto--uso-intro">
+          Usados em animais de companhia, de produção e silvestres — em infecções respiratórias, urinárias, dermatológicas, gastrointestinais e em cirurgias. O uso se classifica em três formas:
+        </p>
+
+        <div class="grade-tres-colunas--uso">
+          <div class="cartao-uso">
+            <h3 class="cartao-uso__titulo">Terapêutico</h3>
+            <p class="cartao-uso__descricao">O animal já está doente e precisa de tratamento.</p>
+          </div>
+          <div class="cartao-uso">
+            <h3 class="cartao-uso__titulo">Profilático</h3>
+            <p class="cartao-uso__descricao">Previne a infecção antes que ela ocorra.</p>
+          </div>
+          <div class="cartao-uso">
+            <h3 class="cartao-uso__titulo">Metafilático</h3>
+            <p class="cartao-uso__descricao">Trata o grupo quando parte dele já apresenta sinais, evitando a disseminação.</p>
+          </div>
+        </div>
+
+        <div class="grade-dois-colunas--uso">
+          <div class="cartao-animal">
+            <p class="cartao-animal__titulo">Animais de produção</p>
+            <p class="cartao-animal__descricao">Bovinos, suínos e aves: controle de doenças, prevenção de infecções e redução de perdas econômicas no rebanho.</p>
+          </div>
+          <div class="cartao-animal">
+            <p class="cartao-animal__titulo">Animais de companhia</p>
+            <p class="cartao-animal__descricao">Cães e gatos: uso individualizado, conforme a condição clínica e a necessidade de cada paciente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SEÇÃO 04 — USO CORRETO
+         ============================ -->
+    <section id="correto" data-reveal class="secao-cinza">
+      <div class="conteudo-container">
+        <p class="secao-label">04 — A diferença que protege</p>
+        <h2 class="secao-titulo--correto">Uso correto × uso incorreto</h2>
+
+        <div class="grade-comparativa">
+          <div class="cartao-comparativo cartao-comparativo--correto">
+            <div class="cartao-comparativo__cabecalho">
+              <span class="icone-comparativo icone-comparativo--correto">✓</span>
+              <span class="cartao-comparativo__titulo--correto">Uso correto</span>
+            </div>
+            <ul class="lista-comparativa">
+              <li class="lista-comparativa__item">
+                <span class="lista-comparativa__ponto--correto">·</span>Sempre com prescrição médico-veterinária
+              </li>
+              <li class="lista-comparativa__item">
+                <span class="lista-comparativa__ponto--correto">·</span>Dose, horários e duração corretos
+              </li>
+              <li class="lista-comparativa__item">
+                <span class="lista-comparativa__ponto--correto">·</span>Tratamento concluído por completo, mesmo após melhora
+              </li>
+              <li class="lista-comparativa__item">
+                <span class="lista-comparativa__ponto--correto">·</span>Medicamento adequado ao agente e ao paciente
+              </li>
+              <li class="lista-comparativa__item">
+                <span class="lista-comparativa__ponto--correto">·</span>Descarte correto das sobras
+              </li>
             </ul>
           </div>
-          <div>
-            <div>
-              <span>✕</span>
-              <span>Uso incorreto</span>
+
+          <div class="cartao-comparativo cartao-comparativo--incorreto">
+            <div class="cartao-comparativo__cabecalho">
+              <span class="icone-comparativo icone-comparativo--incorreto">✕</span>
+              <span class="cartao-comparativo__titulo--incorreto">Uso incorreto</span>
             </div>
-            <ul>
-              <li>Comprar sem prescrição e se automedicar</li>
-              <li>Interromper ao primeiro sinal de melhora</li>
-              <li>Usar doses ou tempos de tratamento errados</li>
-              <li>Usar antibiótico para doença viral</li>
-              <li>Reaproveitar sobras ou compartilhar entre animais</li>
+            <ul class="lista-comparativa">
+              <li class="lista-comparativa__item">
+                <span class="lista-comparativa__ponto--incorreto">·</span>Comprar sem prescrição e se automedicar
+              </li>
+              <li class="lista-comparativa__item">
+                <span class="lista-comparativa__ponto--incorreto">·</span>Interromper ao primeiro sinal de melhora
+              </li>
+              <li class="lista-comparativa__item">
+                <span class="lista-comparativa__ponto--incorreto">·</span>Usar doses ou tempos de tratamento errados
+              </li>
+              <li class="lista-comparativa__item">
+                <span class="lista-comparativa__ponto--incorreto">·</span>Usar antibiótico para doença viral
+              </li>
+              <li class="lista-comparativa__item">
+                <span class="lista-comparativa__ponto--incorreto">·</span>Reaproveitar sobras ou compartilhar entre animais
+              </li>
             </ul>
           </div>
         </div>
-        <div>
-          <p><strong>Conscientização começa na compra.</strong> A prescrição veterinária é indispensável: o profissional diagnostica, avalia a necessidade, escolhe o medicamento e define dose e duração. Comprar sem orientação traz riscos — falhas terapêuticas, intoxicações, reações adversas e agravamento do quadro. Clínicas, agropecuárias e farmácias também têm papel na conscientização.</p>
+
+        <div class="aviso-conscientizacao">
+          <p class="aviso-conscientizacao__texto">
+            <strong class="aviso-conscientizacao__destaque">Conscientização começa na compra.</strong>
+            A prescrição veterinária é indispensável: o profissional diagnostica, avalia a necessidade, escolhe o medicamento e define dose e duração. Comprar sem orientação traz riscos — falhas terapêuticas, intoxicações, reações adversas e agravamento do quadro. Clínicas, agropecuárias e farmácias também têm papel na conscientização.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="saude">
-      <div>
-        <p>05 — Saúde Única</p>
-        <div>
+    <!-- ============================
+         SEÇÃO 05 — SAÚDE ÚNICA
+         ============================ -->
+    <section id="saude" data-reveal class="secao-branca">
+      <div class="conteudo-container">
+        <p class="secao-label">05 — Saúde Única</p>
+
+        <div class="grade-saude">
           <div>
-            <h2>Uma só saúde: animal, humana e ambiental</h2>
-            <p>A resistência gera falhas terapêuticas, doenças mais longas e graves e custos maiores. Na produção, causa perdas econômicas e mortalidade. Bactérias resistentes passam entre animais e pessoas — as zoonoses — e resíduos de antimicrobianos contaminam o ambiente. Hoje, é uma das maiores ameaças à saúde global.</p>
+            <h2 class="secao-titulo--saude">Uma só saúde: animal, humana e ambiental</h2>
+            <p class="secao-descricao--saude">
+              A resistência gera falhas terapêuticas, doenças mais longas e graves e custos maiores. Na produção, causa perdas econômicas e mortalidade. Bactérias resistentes passam entre animais e pessoas — as zoonoses — e resíduos de antimicrobianos contaminam o ambiente. Hoje, é uma das maiores ameaças à saúde global.
+            </p>
           </div>
+
+          <div class="lista-saude">
+            <div class="cartao-saude-item">
+              <span class="cartao-saude-item__bolinha"></span>
+              <div>
+                <p class="cartao-saude-item__titulo">Saúde animal</p>
+                <p class="cartao-saude-item__descricao">Infecções persistentes, tratamentos que falham e maior mortalidade.</p>
+              </div>
+            </div>
+            <div class="cartao-saude-item">
+              <span class="cartao-saude-item__bolinha"></span>
+              <div>
+                <p class="cartao-saude-item__titulo">Saúde humana</p>
+                <p class="cartao-saude-item__descricao">Bactérias resistentes transmitidas por zoonoses ampliam o risco à saúde pública.</p>
+              </div>
+            </div>
+            <div class="cartao-saude-item">
+              <span class="cartao-saude-item__bolinha"></span>
+              <div>
+                <p class="cartao-saude-item__titulo">Saúde ambiental</p>
+                <p class="cartao-saude-item__descricao">Resíduos de antimicrobianos no ambiente disseminam a resistência.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bloco-veterinario">
+          <h3 class="bloco-veterinario__titulo">O papel do médico-veterinário</h3>
+          <p class="bloco-veterinario__descricao">
+            Diagnóstico preciso, escolha adequada do antimicrobiano e orientação dos tutores sobre concluir o tratamento, descartar sobras e os riscos da automedicação. Cabe a ele evitar prescrições desnecessárias, incentivar o uso racional e participar da educação sanitária — preservando a eficácia dos antibióticos para todos.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SEÇÃO 06 — FAQ
+         ============================ -->
+    <section id="faq" data-reveal class="secao-cinza">
+      <div class="conteudo-container--estreito">
+        <p class="secao-label">06 — Perguntas frequentes</p>
+        <h2 class="secao-titulo">Dúvidas comuns de tutores</h2>
+
+        <div class="lista-faq">
+          <details class="faq-item">
+            <summary>
+              Posso usar um antibiótico que sobrou de outro tratamento?
+              <span class="faq-item__icone">+</span>
+            </summary>
+            <p class="faq-item__resposta">Não. Sobras podem ter dose, tipo ou validade inadequados e favorecem o surgimento de bactérias resistentes. Cada tratamento é definido para um caso específico.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Meu animal melhorou — posso parar o antibiótico antes do fim?
+              <span class="faq-item__icone">+</span>
+            </summary>
+            <p class="faq-item__resposta">Não. Interromper cedo deixa sobreviventes mais resistentes. Conclua sempre o tratamento prescrito, mesmo que os sinais já tenham desaparecido.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Antibiótico serve para qualquer infecção?
+              <span class="faq-item__icone">+</span>
+            </summary>
+            <p class="faq-item__resposta">Não. Ele só age contra bactérias. Não funciona em viroses (como cinomose ou parvovirose) nem em micoses, que exigem antifúngicos.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Posso comprar antibiótico sem receita?
+              <span class="faq-item__icone">+</span>
+            </summary>
+            <p class="faq-item__resposta">O ideal é sempre ter prescrição veterinária. Sem ela, há risco de escolher o medicamento, a dose e o tempo de tratamento errados, comprometendo a recuperação.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Por que isso afeta as pessoas também?
+              <span class="faq-item__icone">+</span>
+            </summary>
+            <p class="faq-item__resposta">Bactérias resistentes circulam entre animais, pessoas e meio ambiente. Por isso a resistência é tratada sob o conceito de Saúde Única (One Health).</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SEÇÃO 07 — GLOSSÁRIO
+         ============================ -->
+    <section id="glossario" data-reveal class="secao-branca">
+      <div class="conteudo-container">
+        <p class="secao-label">07 — Glossário</p>
+        <h2 class="secao-titulo">Termos em palavras simples</h2>
+
+        <div class="grade-glossario">
+          <dl class="lista-glossario">
+            <dt class="glossario-termo">Resistência antimicrobiana</dt>
+            <dd class="glossario-definicao">Capacidade da bactéria de sobreviver ao antibiótico que antes a eliminava.</dd>
+
+            <dt class="glossario-termo">Pressão de seleção</dt>
+            <dd class="glossario-definicao">Eliminação das bactérias sensíveis e sobrevivência das resistentes.</dd>
+
+            <dt class="glossario-termo">Plasmídeo</dt>
+            <dd class="glossario-definicao">Pequena molécula de DNA que carrega e transfere genes de resistência.</dd>
+
+            <dt class="glossario-termo">Bomba de efluxo</dt>
+            <dd class="glossario-definicao">Mecanismo que expulsa o antibiótico de dentro da bactéria.</dd>
+
+            <dt class="glossario-termo">Superbactéria</dt>
+            <dd class="glossario-definicao">Bactéria multirresistente que sobrevive a vários antibióticos.</dd>
+          </dl>
+
+          <dl class="lista-glossario">
+            <dt class="glossario-termo">Uso profilático</dt>
+            <dd class="glossario-definicao">Uso preventivo, antes que a infecção ocorra.</dd>
+
+            <dt class="glossario-termo">Uso metafilático</dt>
+            <dd class="glossario-definicao">Tratamento do grupo quando parte dele já apresenta sinais.</dd>
+
+            <dt class="glossario-termo">Zoonose</dt>
+            <dd class="glossario-definicao">Doença transmitida entre animais e seres humanos.</dd>
+
+            <dt class="glossario-termo">Saúde Única (One Health)</dt>
+            <dd class="glossario-definicao">Integração entre a saúde animal, humana e ambiental.</dd>
+
+            <dt class="glossario-termo">Antifúngico</dt>
+            <dd class="glossario-definicao">Medicamento específico contra fungos — não substitui antibiótico.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         RODAPÉ
+         ============================ -->
+    <footer class="rodape">
+      <div class="rodape-container">
+        <div class="grade-rodape">
           <div>
-            <div>
-              <span></span>
-              <div>
-                <p><strong>Saúde animal</strong></p>
-                <p>Infecções persistentes, tratamentos que falham e maior mortalidade.</p>
-              </div>
-            </div>
-            <div>
-              <span></span>
-              <div>
-                <p><strong>Saúde humana</strong></p>
-                <p>Bactérias resistentes transmitidas por zoonoses ampliam o risco à saúde pública.</p>
-              </div>
-            </div>
-            <div>
-              <span></span>
-              <div>
-                <p><strong>Saúde ambiental</strong></p>
-                <p>Resíduos de antimicrobianos no ambiente disseminam a resistência.</p>
-              </div>
-            </div>
+            <p class="rodape-marca">
+              <span class="rodape-marca__bolinha"></span>
+              Uso Consciente
+            </p>
+            <p class="rodape-descricao">
+              A resistência antimicrobiana é combatida pela ação conjunta de profissionais, tutores e órgãos de fiscalização — preservando a saúde dos animais, das pessoas e do meio ambiente.
+            </p>
+            <p class="rodape-creditos">Centro Universitário Santa Cruz · Medicina Veterinária · Curitiba, 2026</p>
+            <p class="rodape-autores">Aline Ferreira · Ana Gabriele · Mariana Vitória · Milena Martins · Rebecca Monteiro · Suella · Orientação: Prof.ª Dra. Fabiola Regina Stellan</p>
+          </div>
+
+          <div>
+            <p class="rodape-referencias-label">Referências</p>
+            <ul class="lista-referencias">
+              <li>BRASIL. Ministério da Agricultura e Pecuária (MAPA). <em>Plano de ação nacional de prevenção e controle da resistência aos antimicrobianos.</em> Brasília: MAPA, 2022.</li>
+              <li>MACEDO, A. S. <em>Aplicações dos antimicrobianos na medicina veterinária.</em> Biodiversidade, Cuiabá, v. 22, n. 1, 2023.</li>
+              <li>SANTOS, J. M. da S. et al. <em>Uso indiscriminado de antibióticos na medicina veterinária e os impactos na Saúde Única.</em> Brazilian Journal of Implantology and Health Sciences, v. 7, n. 3, p. 1656–1672, 2025.</li>
+            </ul>
           </div>
         </div>
-
-        <div>
-          <h3>O papel do médico-veterinário</h3>
-          <p>Diagnóstico preciso, escolha adequada do antimicrobiano e orientação dos tutores sobre concluir o tratamento, descartar sobras e os riscos da automedicação. Cabe a ele evitar prescrições desnecessárias, incentivar o uso racional e participar da educação sanitária — preservando a eficácia dos antibióticos para todos.</p>
-        </div>
       </div>
-    </section>
-
-    <section id="faq">
-      <div>
-        <p>06 — Perguntas frequentes</p>
-        <h2>Dúvidas comuns de tutores</h2>
-        <div>
-          <details>
-            <summary>Posso usar um antibiótico que sobrou de outro tratamento? <span>+</span></summary>
-            <p>Não. Sobras podem ter dose, tipo ou validade inadequados e favorecem o surgimento de bactérias resistentes. Cada tratamento é definido para um caso específico.</p>
-          </details>
-          <details>
-            <summary>Meu animal melhorou — posso parar o antibiótico antes do fim? <span>+</span></summary>
-            <p>Não. Interromper cedo deixa sobreviventes mais resistentes. Conclua sempre o tratamento prescrito, mesmo que os sinais já tenham desaparecido.</p>
-          </details>
-          <details>
-            <summary>Antibiótico serve para qualquer infecção? <span>+</span></summary>
-            <p>Não. Ele só age contra bactérias. Não funciona em viroses (como cinomose ou parvovirose) nem em micoses, que exigem antifúngicos.</p>
-          </details>
-          <details>
-            <summary>Posso comprar antibiótico sem receita? <span>+</span></summary>
-            <p>O ideal é sempre ter prescrição veterinária. Sem ela, há risco de escolher o medicamento, a dose e o tempo de tratamento errados, comprometendo a recuperação.</p>
-          </details>
-          <details>
-            <summary>Por que isso afeta as pessoas também? <span>+</span></summary>
-            <p>Bactérias resistentes circulam entre animais, pessoas e meio ambiente. Por isso a resistência é tratada sob o conceito de Saúde Única (One Health).</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section id="glossario">
-      <div>
-        <p>07 — Glossário</p>
-        <h2>Termos em palavras simples</h2>
-        <div>
-          <dl>
-            <dt>Resistência antimicrobiana</dt>
-            <dd>Capacidade da bactéria de sobreviver ao antibiótico que antes a eliminava.</dd>
-            <dt>Pressão de seleção</dt>
-            <dd>Eliminação das bactérias sensíveis e sobrevivência das resistentes.</dd>
-            <dt>Plasmídeo</dt>
-            <dd>Pequena molécula de DNA que carrega e transfere genes de resistência.</dd>
-            <dt>Bomba de efluxo</dt>
-            <dd>Mecanismo que expulsa o antibiótico de dentro da bactéria.</dd>
-            <dt>Superbactéria</dt>
-            <dd>Bactéria multirresistente que sobrevive a vários antibióticos.</dd>
-          </dl>
-          <dl>
-            <dt>Uso profilático</dt>
-            <dd>Uso preventivo, antes que a infecção ocorra.</dd>
-            <dt>Uso metafilático</dt>
-            <dd>Tratamento do grupo quando parte dele já apresenta sinais.</dd>
-            <dt>Zoonose</dt>
-            <dd>Doença transmitida entre animais e seres humanos.</dd>
-            <dt>Saúde Única (One Health)</dt>
-            <dd>Integração entre a saúde animal, humana e ambiental.</dd>
-            <dt>Antifúngico</dt>
-            <dd>Medicamento específico contra fungos — não substitui antibiótico.</dd>
-          </dl>
-        </div>
-      </div>
-    </section>
+    </footer>
 
   </main>
 
-  <footer>
-    <div>
-      <div>
-        <div>
-          <p><span></span>Uso Consciente</p>
-          <p>A resistência antimicrobiana é combatida pela ação conjunta de profissionais, tutores e órgãos de fiscalização — preservando a saúde dos animais, das pessoas e do meio ambiente.</p>
-          <p>Centro Universitário Santa Cruz · Medicina Veterinária · Curitiba, 2026</p>
-          <p>Aline Ferreira · Ana Gabriele · Mariana Vitória · Milena Martins · Rebecca Monteiro · Suella · Orientação: Prof.ª Dra. Fabiola Regina Stellan</p>
-        </div>
-        <div>
-          <p>Referências</p>
-          <ul>
-            <li>BRASIL. Ministério da Agricultura e Pecuária (MAPA). <em>Plano de ação nacional de prevenção e controle da resistência aos antimicrobianos.</em> Brasília: MAPA, 2022.</li>
-            <li>MACEDO, A. S. <em>Aplicações dos antimicrobianos na medicina veterinária.</em> Biodiversidade, Cuiabá, v. 22, n. 1, 2023.</li>
-            <li>SANTOS, J. M. da S. et al. <em>Uso indiscriminado de antibióticos na medicina veterinária e os impactos na Saúde Única.</em> Brazilian Journal of Implantology and Health Sciences, v. 7, n. 3, p. 1656–1672, 2025.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <script src="js/support.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
